@@ -4,6 +4,7 @@ layout: splash
 permalink: /publications/
 ---
 
-{% for post in site.publications reversed %}
+{% assign publications = site.publications | sort: "year" | reversed %}
+{% for post in publications %}
   {% include archive-single.html %}
 {% endfor %}
